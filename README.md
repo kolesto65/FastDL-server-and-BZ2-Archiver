@@ -15,7 +15,7 @@ Installation:
 1. Configure settings.json
 2. Install Express.JS (npm i express)
 ```
-<img src="]([https://github.com/kolesto65/FastDL-BZ2-Archiver/blob/main/settings_config.png" alt="settings.json configuration">
+<img src="]([https://github.com/kolesto65/FastDL-BZ2-Archiver/blob/main/settings_config.png?raw=true" alt="settings.json configuration">
 
 Launch:
 
