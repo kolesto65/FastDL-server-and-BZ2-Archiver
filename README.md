@@ -15,7 +15,7 @@ Installation:
 1. Configure settings.json
 2. Install Express.JS (npm i express)
 ```
-![Alt text]([/posts/path/to/img.jpg](https://rocugames.ru/setting_conf.png "settings.json configuration")
+![Alt text]([https://rocugames.ru/setting_conf.png](https://rocugames.ru/setting_conf.png "settings.json configuration")
 
 Launch:
 
