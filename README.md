@@ -4,7 +4,7 @@ My solution to organizing fastDL on VDS for Source engine games (CS:GO, CS:S and
 Requirments:
 ```
 Node.JS
-Game server and this script on same VDS\n
+Game server and this script on same VDS
 Public access to server ip and port
 ```
 
