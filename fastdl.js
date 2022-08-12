@@ -18,6 +18,7 @@ app.get('/update', async (req, res) => {
   fs.readdir(dir, function(err, list) {
     if (err) return done(err);
     var results = []
+    var processed = 0
     var i = 0;
     (function next() {
       var file = list[i++];
@@ -38,12 +39,13 @@ app.get('/update', async (req, res) => {
         } else {
           if(settings.extensions.find(x=> x == path.extname(file))) {
             results.push(file);
+            processed += 1
                         console.log(`Processing: ${file} 
-              Total: ${results.length}`)
+              Total: ${processed}`)
             total += file+'<br/>'
             if(files.indexOf(file) == -1) {
               files.push(file)
-              await exec.execSync(`bzip2 -ckz ${file} > ${settings.fastdl_dir+'/'+file.slice(mainpath.length+1)}.bz2`)
+              await exec.execSync(`bzip2 -ckz "${file}" > "${settings.fastdl_dir+'/'+file.slice(mainpath.length+1)}.bz2"`)
             }
           }
           next();
@@ -57,6 +59,7 @@ walk(settings.csgo_dir, function(err, results) {
   if (err) throw err;
   fs.writeFileSync('files.json', JSON.stringify(files, null, '\t'));
   return res.send(`Files: ${results.length}<br/>${total}`)
+  console.log(`Done! ${results.length} files`)
 });
       }
 })
