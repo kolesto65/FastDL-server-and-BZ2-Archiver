@@ -29,7 +29,7 @@ Start fastdl.js with any process manager you want, you can keep it in background
 How to use:
 ```
 After launching script, open in browser http://yourserverip:port/update?pass=yourpassword 
-it will start processing your server's /csgo/ directory and creating .bz2 archives for files with desired extensions.
+it will start processing your server's /csgo/ directory and creating .bz2 archives for files with desired extensions, showing info in console.
 After processing is done, page you opened will give you list of all processed files and their total count, created .bz2 archives will be already
 accessible on http://yourserverip:port/example.ext.bz2, so for fastdl address you should use http://yourserverip:port.
 ```
