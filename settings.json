@@ -1,5 +1,5 @@
 {
-	"csgo_dir": "/srv/gameap/servers/mgrg/csgo", 
+	"game_dir": "/srv/gameap/servers/mgrg/csgo", 
 	"fastdl_dir": "./fastdl",
 	"extensions": [".bsp", ".nav", ".vmt", ".vtf", ".vtx", ".vvd", ".phy", ".mdl", ".mp3", ".png", ".jpg"],
 	"password": "12345",
