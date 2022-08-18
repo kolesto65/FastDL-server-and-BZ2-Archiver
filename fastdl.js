@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 let settings = require('./settings.json')
 var files = require('./files.json')
-var mainpath = path.resolve(settings.csgo_dir)
+var mainpath = path.resolve(settings.game_dir)
 var dlpath = path.resolve(settings.fastdl_dir)
 app.get('/update', async (req, res) => {
     var total = ''
@@ -18,7 +18,6 @@ app.get('/update', async (req, res) => {
             fs.readdir(dir, function(err, list) {
                 if (err) return done(err);
                 var results = []
-                var processed = 0
                 var i = 0;
                 (function next() {
                     var file = list[i++];
@@ -39,9 +38,7 @@ app.get('/update', async (req, res) => {
                         } else {
                             if (settings.extensions.find(x => x == path.extname(file))) {
                                 results.push(file);
-                                processed += 1
-                                console.log(`Processing: ${file} 
-              Total: ${processed}`)
+                                console.log(`Processing: ${file}`)
                                 total += file + '<br/>'
                                 if (files.indexOf(file) == -1) {
                                     files.push(file)
@@ -55,7 +52,7 @@ app.get('/update', async (req, res) => {
             });
         };
 
-        walk(settings.csgo_dir, function(err, results) {
+        walk(settings.game_dir, function(err, results) {
             if (err) throw err;
             fs.writeFileSync('files.json', JSON.stringify(files, null, '\t'));
             return res.send(`Files: ${results.length}<br/>${total}`)
