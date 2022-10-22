@@ -1,4 +1,6 @@
 # FastDL server + BZ2 Archiver
+[![CodeFactor](https://www.codefactor.io/repository/github/kolesto65/fastdl-server-and-bz2-archiver/badge)](https://www.codefactor.io/repository/github/kolesto65/fastdl-server-and-bz2-archiver)
+
 My solution to organizing fastDL on VDS for Source engine games (CS:GO, CS:S and other)
 
 Requirments:
