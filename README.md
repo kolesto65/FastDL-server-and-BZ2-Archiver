@@ -43,4 +43,4 @@ TODO:
 3. Made a way to add custom files/folders to processing
 4. Maybe a little web interface to control and configure entire process.
 ```
-#GOVNOCODE
+#SHITCODE
